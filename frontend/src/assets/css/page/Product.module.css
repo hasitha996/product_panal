@@ -1,0 +1,152 @@
+.productPage {
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .headerIcons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerActions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .searchInput {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .addButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .exportButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .tableContainer {
+    margin-top: 20px;
+  }
+  
+  .productTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .productTable th, .productTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .editButton {
+    background-color: #242424;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .filterBar {
+    margin-bottom: 20px;
+  }
+  
+  .multiSelect {
+    margin-right: 10px;
+  }
+  
+  .tableContainer {
+    max-height: 500px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    border: 1px solid #ddd; /* Optional: Adds a border around the container */
+    border-radius: 4px; /* Optional: Rounds the corners of the border */
+  }
+  
+  .productTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .productTable th, .productTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .productTable th {
+    background-color: #f4f4f4;
+  }
+  
+  .footer {
+    padding: 10px;
+    text-align: right;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+  
+  .recordCount {
+    font-weight: bold;
+    align-items: start;
+  }
+  
+
+/* Container for each member */
+.member {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+/* Styling for member images */
+.memberImage {
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Styling for member names */
+.memberName {
+  font-size: 14px; /* Adjust as needed */
+  color: #333; /* Adjust as needed */
+}
+
+/* Styling for tags */
+.tag {
+  background-color: #e0e0e0; /* Adjust background color as needed */
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 2px;
+  font-size: 12px; /* Adjust as needed */
+  color: #333; /* Adjust text color as needed */
+}

@@ -1,0 +1,102 @@
+/* Container for the register page with gradient background */
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  position: relative;
+  background-color: #0056b3;
+  margin: 0; /* Remove default margin */
+}
+
+/* Styles for the background image section with gradient */
+.backgroundImage {
+  position: absolute; /* Ensure it's behind the content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://cdn.pixabay.com/photo/2021/01/05/06/40/boat-5889919_1280.png'); /* Default image */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  transition: background-image 1s ease-in-out, background 1s ease-in-out;
+}
+
+/* Overlay to darken the background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 1s ease-in-out;
+}
+
+/* Styles for the register form section */
+.registerForm {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px; /* Maximum width of the form */
+  width: 100%; /* Full width up to max-width */
+}
+
+/* Card styling */
+.card {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.btnPrimary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btnPrimary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Form styling */
+.formGroup label {
+  font-weight: bold;
+}
+
+.formGroup .formControl {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.formGroup .formControl:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 4px;
+}

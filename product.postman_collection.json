@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "e44ffcf7-2cf6-4512-acfc-630823b2c1b3",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38204666"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8080/api/auth/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/api/auth/signout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "profile update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "max",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "d",
+									"type": "text"
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8080/api/users/update"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/api/products"
+					},
+					"response": []
+				},
+				{
+					"name": "create products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "members",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "categories",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nextMeeting",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8080/api/create_products"
+					},
+					"response": []
+				},
+				{
+					"name": "Product By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080//api/one_product/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/api/product_update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/api/product_delete/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get Categories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/api/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "get Tags",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1IiwiaWF0IjoxNzIzNzAwMjI2LCJleHAiOjE3MjQzMDUwMjZ9.YcEVBPVkYmdkRJXEwZzqCSLwVXJbc1nGILWQjQTehKs",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/api/tags"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

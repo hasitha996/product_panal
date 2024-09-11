@@ -1,0 +1,180 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;  
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff;  
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Positioning context for absolute positioning */
+    margin-right: 0%;
+    text-align: left;
+}
+
+.sidebarTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.userSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.companyName {
+    margin-bottom: 5px;
+    font-weight: bold;  
+}
+
+
+.sidebarLinks {
+    margin-top: 20px;
+    
+}
+
+.sidebarLink {
+    display: flex;
+    text-align: left;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebarLink:hover {
+    background-color: #d9dadb;
+    color: black;
+}
+
+.iconLeft {
+    margin-right: 10px;
+}
+
+.iconRight {
+    margin-left: auto; /* Pushes the icon to the right edge */
+}
+.expandableMenu {
+    padding-left: 20px;
+}
+
+.sidebarSubLink {
+    display: block;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.sidebarSubLink:hover {
+    background-color: #777879;
+    color: white;
+}
+
+.popupMenu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popupLink {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.popupLink:hover {
+    background-color: #ecf0f1;
+}
+
+/* Styles for the bottom of the sidebar */
+.sidebarButtons {
+    margin-top: auto; /* Pushes the buttons to the bottom of the sidebar */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: rgb(0, 0, 0); /* Default color for text */
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px; /* Spacing between buttons */
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #d9dadb; /* Background color on hover */
+    color: black; /* Color on hover */
+}
+
+.icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+.sidebarButtons {
+    margin-top: auto; /* Pushes the buttons to the bottom of the sidebar */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: rgb(0, 0, 0); /* Default color for text */
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px; /* Spacing between buttons */
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #d9dadb; /* Background color on hover */
+    color: black; /* Color on hover */
+}
+
+.icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Additional styling for the billing button */
+.billingButton {
+    color: black; /* Text color for the Billing button */
+}
+
+/* Styling for the black button */
+.blackButton {
+    background-color: black; /* Black background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 10px; /* Spacing between text and button */
+}
+
+.blackButton:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+}

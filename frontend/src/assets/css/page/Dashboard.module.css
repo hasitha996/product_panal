@@ -1,0 +1,111 @@
+/* Dashboard.css */
+.container-fluid {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.circle-tile {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #343a40;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.circle-tile-heading {
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.circle-tile-content {
+  padding: 20px;
+  background-color: #343a40;
+  border-radius: 10px;
+}
+
+.circle-tile-description {
+  font-size: 1em;
+}
+
+.circle-tile-number {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.circle-tile-footer {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.circle-tile-footer:hover {
+  color: #f8f9fa;
+}
+
+.dark-blue {
+  background-color: #007bff;
+  border: 1px solid #0056b3;
+}
+
+.red {
+  background-color: #dc3545;
+  border: 1px solid #c82333;
+}
+
+.green {
+  background-color: #28a745;
+  border: 1px solid #1e7e34;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+/* Layout adjustments */
+.row {
+  display: flex;
+  justify-content: center; /* Center the tiles horizontally */
+  gap: 20px; /* Space between items */
+}
+
+.col-lg-3,
+.col-md-6 {
+  display: flex;
+  justify-content: center; /* Center the tile in the column */
+  align-items: center; /* Center the tile vertically in the column */
+  margin-bottom: 20px; /* Space between rows */
+}
+
+@media (max-width: 768px) {
+  .circle-tile {
+    padding: 10px;
+  }
+
+  .circle-tile-heading {
+    font-size: 1.5em;
+  }
+
+  .circle-tile-number {
+    font-size: 1.2em;
+  }
+
+  .circle-tile-description {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,72 @@
+.tableContainer {
+    margin-top: 20px;
+    position: relative; 
+  }
+  
+  .productTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .productTable th, .productTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .productTable th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .productTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .productTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c82333;
+  }
+  
+  /* Pagination controls and record count */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .rowCount {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
