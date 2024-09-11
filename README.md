@@ -56,5 +56,5 @@ This project consists of a React frontend and Node.js backend with JWT authentic
 - **Password**: 12345
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+---
 Git = https://github.com/hasitha996
