@@ -37,7 +37,7 @@ backend run on http://localhost:8080/
 
 
 
-   User = admin@test.com
+   User = admin1@test.com
    User Name = admin
    password =12345
 
