@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { MultiSelect } from 'primereact/multiselect';
+import Select from 'react-select';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import styles from '../assets/css/page/Product.module.css'; 
+import styles from '../assets/css/page/Product.module.css'; // Adjust the path as needed
 
 const ProductForm = ({ product, categories, tags, members, onSave, onClose }) => {
   const [brand, setBrand] = useState("");
@@ -19,20 +19,20 @@ const ProductForm = ({ product, categories, tags, members, onSave, onClose }) =>
 
       // Parse members if they come as a stringified array, otherwise assume it's an array
       const productMembers = typeof product.members === 'string' ? JSON.parse(product.members) : product.members;
-      
-      // Ensure `Categories` and `Tags` are arrays (product.Categories and product.Tags are arrays of objects)
+
+      // Ensure `Categories` and `Tags` are arrays
       const productCategories = product.Categories || [];
       const productTags = product.Tags || [];
 
       // Set the selected members, categories, and tags using the provided data
       setSelectedCategories(
-        categories.filter(cat => productCategories.some(pCat => pCat.id === cat.id)) || []
+        categories.filter(cat => productCategories.some(pCat => pCat.id === cat.id)).map(cat => ({ value: cat.id, label: cat.name })) || []
       );
       setSelectedTags(
-        tags.filter(tag => productTags.some(pTag => pTag.id === tag.id)) || []
+        tags.filter(tag => productTags.some(pTag => pTag.id === tag.id)).map(tag => ({ value: tag.id, label: tag.name })) || []
       );
       setSelectedMembers(
-        members.filter(member => productMembers.includes(member.id)) || []
+        members.filter(member => productMembers.includes(member.id)).map(member => ({ value: member.id, label: member.username })) || []
       );
 
       setNextMeeting(product.nextMeeting ? new Date(product.nextMeeting) : new Date());
@@ -45,9 +45,9 @@ const ProductForm = ({ product, categories, tags, members, onSave, onClose }) =>
       onSave({
         brand,
         description,
-        members: selectedMembers.map(member => member.id),
-        categories: selectedCategories.map(cat => cat.id),
-        tags: selectedTags.map(tag => tag.id),
+        members: selectedMembers.map(member => member.value),
+        categories: selectedCategories.map(cat => cat.value),
+        tags: selectedTags.map(tag => tag.value),
         nextMeeting: nextMeeting.toISOString() // Format date for submission
       });
     } catch (error) {
@@ -80,37 +80,34 @@ const ProductForm = ({ product, categories, tags, members, onSave, onClose }) =>
       </div>
       <div className="mb-3">
         <label htmlFor="members" className="form-label">Members:</label>
-        <MultiSelect
+        <Select
           id="members"
           value={selectedMembers}
-          options={members}
-          onChange={(e) => setSelectedMembers(e.value)}
-          optionLabel="username" // Change to the appropriate property from members
-          className={styles.multiSelectWrapper} // Apply custom styles
+          onChange={(selected) => setSelectedMembers(selected)}
+          options={members.map(member => ({ value: member.id, label: member.username }))}
+          isMulti
           placeholder="Select members"
         />
       </div>
       <div className="mb-3">
         <label htmlFor="categories" className="form-label">Categories:</label>
-        <MultiSelect
+        <Select
           id="categories"
           value={selectedCategories}
-          options={categories}
-          onChange={(e) => setSelectedCategories(e.value)}
-          optionLabel="name" // Adjust   category object
-          className={styles.multiSelectWrapper} // Apply custom styles
+          onChange={(selected) => setSelectedCategories(selected)}
+          options={categories.map(cat => ({ value: cat.id, label: cat.name }))}
+          isMulti
           placeholder="Select categories"
         />
       </div>
       <div className="mb-3">
         <label htmlFor="tags" className="form-label">Tags:</label>
-        <MultiSelect
+        <Select
           id="tags"
           value={selectedTags}
-          options={tags}
-          onChange={(e) => setSelectedTags(e.value)}
-          optionLabel="name" // Adjust   tag object
-          className={styles.multiSelectWrapper} // Apply custom styles
+          onChange={(selected) => setSelectedTags(selected)}
+          options={tags.map(tag => ({ value: tag.id, label: tag.name }))}
+          isMulti
           placeholder="Select tags"
         />
       </div>

@@ -78,7 +78,7 @@ const Product = () => {
 
   // Function to handle opening the modal for adding or editing a product
   const handleAddProduct = () => {
-    setModalProduct(null);
+    setModalProduct(null); // Ensure modalProduct is cleared
     setIsModalEdit(false);
     setIsModalOpen(true);
   };
@@ -137,7 +137,7 @@ const Product = () => {
           handleFilterChange(filterType, values);
         }}
         products={products}
-        setIsModalOpen={setIsModalOpen}
+        setIsModalOpen={handleAddProduct}
       />
       <ProductTable
         products={filteredProducts}
