@@ -1,44 +1,60 @@
-##React -node js   api with jwt authentication  
+# React Node.js API with JWT Authentication Product Panal
 
--- To setup System Need
+This project consists of a React frontend and Node.js backend with JWT authentication, using MySQL for the database.
+
+## System Requirements
 
 - **Node.js v20+**
-- **MySQL**  
+- **MySQL**
 
-##Clone Project##
+---
 
-#Setup Backend
+## Project Setup
 
-*open  backend folder and create new env file 
-*Crteate new database in Mysql
-*restore database 
-*setup database settings in env
+### Clone the Project
 
+- Clone the project repository to your local machine.
 
-run  npm install
+---
 
+## Backend Setup
 
+1. Navigate to the `backend` folder.
+2. Create a new `.env` file.
+3. Create a new database in MySQL.
+4. Restore the database from the provided SQL file.
+5. Set up the database settings in the `.env` file.
+6. Run `npm install` to install backend dependencies.
 
-#setup fontend 
-*open fontend folder and run npm install on cmd
+---
 
+## Frontend Setup
 
+1. Navigate to the `frontend` folder.
+2. Run `npm install` to install frontend dependencies.
 
-#rn app
-*open backend folder and run npm start command 
-*open fontend folder and run npm start command 
+---
 
+## Running the Application
 
+- **Backend**: Navigate to the `backend` folder and run `npm start`.
+- **Frontend**: Navigate to the `frontend` folder and run `npm start`.
 
-#fontend run on http://localhost:8081/
-#backend run on http://localhost:8080/
-#defoult user
+---
 
+## Application URLs
 
+- **Frontend**: `http://localhost:8081/`
+- **Backend**: `http://localhost:8080/`
 
-   *User = admin1@test.com
-   *User Name = admin
-   *password =12345
+---
+
+## Default User Credentials
+
+- **Email**: admin1@test.com
+- **Username**: admin
+- **Password**: 12345
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Git = https://github.com/hasitha996
